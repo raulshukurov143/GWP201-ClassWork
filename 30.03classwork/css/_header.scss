@@ -1,43 +1,77 @@
 header {
-  background-color: darkslategray;
-  color: antiquewhite;
-  height: 10vh;
+  background-image: url(./yemek.png);
+  width: 100%;
+  height: 100vh;
 
-  ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 0;
-    li {
-      list-style-type: none;
-      transition: all 2s linear 1;
-      &:hover {
-        transform: scale(1.2);
+  .container {
+    nav {
+      padding: 30px 0;
+      ul {
+        display: flex;
+        justify-content: space-around;
+        li {
+          font-size: 24px;
+          list-style-type: none;
+          a {
+            font-family: "Pacifico", cursive;
+            color: aliceblue;
+            text-decoration: none;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            padding: 5px;
+            transition: all 2s linear;
+            &::after {
+              content: "";
+              border: 2px solid transparent;
+              border-radius: 5px;
+              display: block;
+              width: 50%;
+            }
+
+            &:hover {
+              &::after {
+                border-color: red;
+              }
+            }
+          }
+        }
       }
     }
-
-    i {
-      border: 2px solid transparent;
-      border-radius: 5px;
-      padding: 5px;
-      transition: all 2s;
-      &:hover {
-        background-color: antiquewhite;
-        color: darkslategray;
-      }
-    }
-    a {
+    .text {
       color: antiquewhite;
-      text-decoration: none;
-      font-size: 16px;
-      border: 2px solid transparent;
-      border-radius: 5px;
-      padding: 5px;
-      transition: all 2s;
-      &:hover {
-        background-color: antiquewhite;
-        color: darkslategray;
-        transform: scale(2);
+      margin: 100px 200px;
+      font-family: "Catamaran", sans-serif;
+
+      P {
+        font-family: "Dancing Script", cursive;
+        font-size: 32px;
+        text-decoration: line-through;
+        margin: 30px 0;
+      }
+      button {
+        padding: 10px 30px;
+        margin: 30px 0;
+        border: 2px solid transparent;
+        background-color: #8a7162;
+        color: antiquewhite;
+        &:hover {
+          background-color: #4f453f;
+          color: black;
+        }
+      }
+      h1 {
+        font-size: 64px;
+      }
+    }
+    .img {
+      img {
+        position: relative;
+        bottom: 66vh;
+        left: 55vw;
+        transition: all 2s linear;
+        &:hover {
+          transform: translate(0, 200px);
+        }
       }
     }
   }
